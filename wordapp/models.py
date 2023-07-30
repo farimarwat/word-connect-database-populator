@@ -17,4 +17,5 @@ class Level(models.Model):
 
 class Solution(models.Model):
     solution_word = models.CharField(max_length=50)
+    solution_details = models.TextField(max_length=1000, null=True,default=None)
     level = models.ForeignKey(Level, on_delete=models.CASCADE)

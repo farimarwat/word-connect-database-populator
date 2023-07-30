@@ -32,6 +32,7 @@
                         <thead>
                         <tr>
                             <th>Solution</th>
+                            <th>Details</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -40,6 +41,9 @@
                                 <td>
                                     {{ solution.solution_word }}
                                 </td>
+                            <td>
+                                {{ solution.solution_details|truncatechars:50 }}
+                            </td>
                             </tr>
                         {% endfor %}
 
@@ -62,6 +66,8 @@
                             <label for="solution_word">Word</label>
                             <input type="text" id="solution_word" name="solution_word" class="m-3 form-control"
                                    placeholder="e.g. CUP">
+                            <label for="solution_details">Dictionary Details</label>
+                            <textarea id="solution_details" name="solution_details" class="m-3 form-control"></textarea>
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-end">

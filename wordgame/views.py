@@ -53,8 +53,9 @@ def solutions(request, levelid):
     if request.method == "POST":
         try:
             word = request.POST.get("solution_word")
+            details = request.POST.get("solution_details")
             if word != "":
-                solution = Solution(level_id=levelid, solution_word=word)
+                solution = Solution(level_id=levelid, solution_word=word, solution_details=details)
                 solution.save()
             else:
                 error = "Error: Input field is required"

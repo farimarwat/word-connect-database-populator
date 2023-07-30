@@ -11,7 +11,7 @@ class LevelAdmin(admin.ModelAdmin):
 
 
 class SolutionAdmin(admin.ModelAdmin):
-    list_display = ("solution_word",)
+    list_display = ("solution_word","solution_details")
 
 
 # Register your models here.
