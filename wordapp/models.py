@@ -10,9 +10,12 @@ class Chapter(models.Model):
 
 class Level(models.Model):
     level_serial = models.IntegerField()
-    level_letters = models.CharField(max_length=50, unique=True)
+    level_letters = models.CharField(max_length=50)
     level_completed = models.BooleanField(default=False)
     chapter = models.ForeignKey(Chapter, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ("level_letters","chapter")
 
 
 class Solution(models.Model):
