@@ -22,5 +22,6 @@ urlpatterns = [
     path('',views.index, name="index"),
     path('chapters/',views.chapters, name="chapters"),
     path('levels/<int:chapterid>', views.levels, name="levels"),
-    path('solutions/<int:levelid>', views.solutions, name="solutions")
+    path('solutions/<int:levelid>', views.solutions, name="solutions"),
+    path('preparedatabase',views.preparedatabase, name="preparedatabase")
 ]
